@@ -247,6 +247,6 @@ request(Method, Request) ->
     R = httpc:request(Method, Request, [{ssl,[{verify,0}]}], []),
     response(R).
 
-response( { ok, {_, _, R1 } ) -> B1 = binary:list_to_bin([R1]),
+response( { ok, {_, _, R1 } } ) -> B1 = binary:list_to_bin([R1]),
 				 jsone:decode(B1, [{object_format, tuple}]);
-response( _ ) -> error;
+response( _ ) -> error.
