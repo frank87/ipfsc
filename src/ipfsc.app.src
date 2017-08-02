@@ -1,0 +1,17 @@
+{application, ipfsc,
+ [{description, "Client for IPFS server"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {applications,
+   [kernel,
+    stdlib,
+    inets,
+    ssl
+   ]},
+  {env,[]},
+  {modules, [ ipfsc ]},
+  {maintainers, []},
+  {licenses, []},
+  {links, []},
+  {runtime_dependencies, [jsone]}
+ ]}.
